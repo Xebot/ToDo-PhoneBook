@@ -1,0 +1,14 @@
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Infrastructure\bin\Debug\netstandard2.0\ToDoPhoneBook.Infrastructure.deps.json
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Infrastructure\bin\Debug\netstandard2.0\ToDoPhoneBook.Infrastructure.dll
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Infrastructure\obj\Debug\netstandard2.0\ToDoPhoneBook.Infrastructure.csprojAssemblyReference.cache
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Infrastructure\obj\Debug\netstandard2.0\ToDoPhoneBook.Infrastructure.AssemblyInfoInputs.cache
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Infrastructure\obj\Debug\netstandard2.0\ToDoPhoneBook.Infrastructure.AssemblyInfo.cs
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Infrastructure\bin\Debug\netstandard2.0\ToDoPhoneBook.Infrastructure.pdb
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Infrastructure\obj\Debug\netstandard2.0\ToDoPhoneBook.Infrastructure.dll
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Infrastructure\obj\Debug\netstandard2.0\ToDoPhoneBook.Infrastructure.pdb
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Infrastructure\bin\Debug\netstandard2.0\ToDoPhoneBook.Contracts.dll
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Infrastructure\bin\Debug\netstandard2.0\ToDoPhoneBook.Domain.dll
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Infrastructure\bin\Debug\netstandard2.0\ToDoPhoneBook.Domain.pdb
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Infrastructure\bin\Debug\netstandard2.0\ToDoPhoneBook.Contracts.pdb
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Infrastructure\obj\Debug\netstandard2.0\ToDoPhoneBook.Infrastructure.csproj.CopyComplete
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Infrastructure\obj\Debug\netstandard2.0\ToDoPhoneBook.Infrastructure.csproj.CoreCompileInputs.cache

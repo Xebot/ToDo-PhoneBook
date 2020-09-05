@@ -1,0 +1,12 @@
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Domain\bin\Debug\netstandard2.0\ToDoPhoneBook.Contracts.dll
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Domain\obj\Debug\netstandard2.0\ToDoPhoneBook.Domain.csprojAssemblyReference.cache
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Domain\obj\Debug\netstandard2.0\ToDoPhoneBook.Domain.AssemblyInfoInputs.cache
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Domain\obj\Debug\netstandard2.0\ToDoPhoneBook.Domain.AssemblyInfo.cs
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Domain\bin\Debug\netstandard2.0\ToDoPhoneBook.Domain.deps.json
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Domain\bin\Debug\netstandard2.0\ToDoPhoneBook.Domain.dll
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Domain\bin\Debug\netstandard2.0\ToDoPhoneBook.Domain.pdb
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Domain\bin\Debug\netstandard2.0\ToDoPhoneBook.Contracts.pdb
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Domain\obj\Debug\netstandard2.0\ToDoPhoneBook.Domain.csproj.CopyComplete
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Domain\obj\Debug\netstandard2.0\ToDoPhoneBook.Domain.dll
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Domain\obj\Debug\netstandard2.0\ToDoPhoneBook.Domain.pdb
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Domain\obj\Debug\netstandard2.0\ToDoPhoneBook.Domain.csproj.CoreCompileInputs.cache
