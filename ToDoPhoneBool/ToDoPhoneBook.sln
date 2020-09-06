@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoPhoneBook.Infrastructur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoPhoneBook.Domain", "ToDoPhoneBook.Domain\ToDoPhoneBook.Domain.csproj", "{8E75FC73-DA5A-4B33-9C34-39E702C14297}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoPhoneBook.Contracts", "ToDoPhoneBook.Contracts\ToDoPhoneBook.Contracts.csproj", "{983102AE-19CC-487B-A42A-7CCC3CCBDF43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoPhoneBook.Contracts", "ToDoPhoneBook.Contracts\ToDoPhoneBook.Contracts.csproj", "{983102AE-19CC-487B-A42A-7CCC3CCBDF43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoPhoneBook.Tests", "ToDoPhoneBook.Tests\ToDoPhoneBook.Tests.csproj", "{233260C9-FFEB-40B3-8C93-116D311DD8D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{983102AE-19CC-487B-A42A-7CCC3CCBDF43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{983102AE-19CC-487B-A42A-7CCC3CCBDF43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{983102AE-19CC-487B-A42A-7CCC3CCBDF43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{233260C9-FFEB-40B3-8C93-116D311DD8D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{233260C9-FFEB-40B3-8C93-116D311DD8D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{233260C9-FFEB-40B3-8C93-116D311DD8D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{233260C9-FFEB-40B3-8C93-116D311DD8D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
