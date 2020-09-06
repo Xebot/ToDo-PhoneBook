@@ -1,0 +1,101 @@
+﻿@model ToDoPhoneBook.Contracts.Models.ToDoItemDto
+@using ToDoPhoneBook.Contracts.Enums
+
+@{
+    ViewData["Title"] = "View";
+}
+<h1>Создать запись</h1>
+
+@await Html.PartialAsync("_Error")
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ItemType" class="control-label">Тип события</label>
+                <br\>
+                <select id="ToDoTypeEnum" asp-for="ItemType" required>
+                    <option value="@ToDoTypeEnum.Meeting">Встреча</option>
+                    <option value="@ToDoTypeEnum.Business">Дело</option>
+                    <option value="@ToDoTypeEnum.Memo">Памятка</option>
+                    <option value="" selected>Выберите пожалуйста</option>
+                </select>
+                <span asp-validation-for="ItemType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label">Тема</label>
+                <input asp-for="Title" class="form-control" required />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label">Дата начала</label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label id="EndDateLabel" asp-for="EndDate" class="control-label">Дата окончания</label>
+                <input asp-for="EndDate" class="form-control" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label id="PlaceLabel" asp-for="Place" class="control-label">Место</label>
+                <input asp-for="Place" class="form-control" />
+                <span asp-validation-for="Place" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">Отметка о выполнении</label>
+                <input class="form-check-input" asp-for="IsDone" />                 
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Создать" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Вернуться на главную</a>
+</div>
+
+<script type="text/javascript">
+
+    $(function () {
+        $("#ToDoTypeEnum").change(function () {
+            CheckVisibility();
+        });
+    });
+
+    function CheckVisibility() {
+        var status = $("#ToDoTypeEnum")[0].value;
+        if (status == "Memo") {
+            $("#ToDoTypeEnum").attr("checked", "checked")
+            $("#EndDateLabel").hide();
+            $("#EndDate").hide();
+            $("#EndDate").removeAttr("required");
+            $("#PlaceLabel").hide();
+            $("#Place").hide();
+        }
+        if (status == "Meeting") {
+            $("#ToDoTypeEnum").attr("checked", "checked")
+            $("#EndDateLabel").show();
+            $("#EndDate").show();
+            $("#EndDate").prop("required", true);
+            $("#PlaceLabel").show();
+            $("#Place").show();
+        }
+        if (status == "Business") {
+            $("#ToDoTypeEnum").attr("checked", "checked")
+            $("#EndDateLabel").show();
+            $("#EndDate").show();
+            $("#EndDate").prop("required", true);
+            $("#PlaceLabel").hide();
+            $("#Place").hide();
+        }
+    }
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

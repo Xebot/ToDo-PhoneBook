@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using ToDoPhoneBook.Core.Services.ToDoService;
 using ToDoPhoneBook.Domain.Entites;
 using ToDoPhoneBook.Infrastructure;
@@ -35,6 +36,7 @@ namespace ToDoPhoneBool
             services.AddTransient<IToDoService, ToDoService>();
 
 
+
             var mapperConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingProfile());
@@ -42,10 +44,13 @@ namespace ToDoPhoneBool
             IMapper mapper = mapperConfig.CreateMapper();
             
             services.AddSingleton(mapper);
+
+            services.AddSingleton<ILoggerFactory, LoggerFactory>();
+            services.AddSingleton(typeof(ILogger<>), typeof(Logger<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, AppDbContext db)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, AppDbContext db, ILoggerFactory loggerfactory)
         {
             if (env.IsDevelopment())
             {
@@ -77,7 +82,7 @@ namespace ToDoPhoneBool
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=ToDo}/{action=Index}/{id?}");
             });
         }
     }

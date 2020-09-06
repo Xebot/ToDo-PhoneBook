@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using ToDoPhoneBook.Domain.Entites.Base;
 
@@ -18,12 +19,15 @@ namespace ToDoPhoneBook.Infrastructure.Repositories.Base
 
         public int Create(T entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Set<T>().Add(entity);
+            _dbContext.SaveChanges();
+            return entity.Id;
         }
 
-        public void Delete(int entity)
+        public void Delete(T entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Set<T>().Remove(entity);
+            _dbContext.SaveChanges();
         }
 
         public IQueryable<T> GetAll()
@@ -33,7 +37,14 @@ namespace ToDoPhoneBook.Infrastructure.Repositories.Base
 
         public int Update(T entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Set<T>().Update(entity);
+            _dbContext.SaveChanges();
+            return entity.Id;
+        }
+
+        public T GetById(int id)
+        {
+            return _dbContext.Set<T>().Where(x => x.Id == id).FirstOrDefault();
         }
     }
 }

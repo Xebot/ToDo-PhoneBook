@@ -4,6 +4,9 @@ using System.Text;
 
 namespace ToDoPhoneBook.Contracts.Models
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ToDoItemsListDto
     {
         public int Current { get; set; }

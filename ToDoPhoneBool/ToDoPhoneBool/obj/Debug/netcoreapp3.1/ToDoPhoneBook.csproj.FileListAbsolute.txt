@@ -157,3 +157,6 @@ D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBool\bin\Debug\netcoreapp3.1\AutoMapper.
 D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBool\obj\Debug\netcoreapp3.1\Razor\Views\ToDo\Index.cshtml.g.cs
 D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBool\obj\Debug\netcoreapp3.1\ToDoPhoneBook.csproj.CoreCompileInputs.cache
 D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBool\obj\Debug\netcoreapp3.1\ToDoPhoneBook.MvcApplicationPartsAssemblyInfo.cache
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBool\obj\Debug\netcoreapp3.1\Razor\Views\ToDo\Edit.cshtml.g.cs
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBool\obj\Debug\netcoreapp3.1\Razor\Views\ToDo\Create.cshtml.g.cs
+D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBool\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Error.cshtml.g.cs

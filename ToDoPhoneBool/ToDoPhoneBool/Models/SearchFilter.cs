@@ -1,16 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace ToDoPhoneBook.Models
+﻿namespace ToDoPhoneBook.Models
 {
-    public class SearchFilter
+    /// <summary>
+    /// Фильтр для отображения записей ежедневника.
+    /// </summary>
+    public class SearchFilterDto
     {
+        /// <summary>
+        /// Запрашиваемая страница.
+        /// </summary>
         public int Current { get; set; }
 
+        /// <summary>
+        /// Количество запрашиваемых элементов.
+        /// </summary>
         public int RowCount { get; set; }
 
+        /// <summary>
+        /// Текст поискового запроса.
+        /// </summary>
         public string SearchPhrase { get; set; }
+
+        /// <summary>
+        /// Период за который отображать записи.
+        /// </summary>
+        public string TimePeriod { get; set; }
+
+        /// <summary>
+        /// Тип запрашиваемых записей.
+        /// </summary>
+        public string Type { get;set; }
     }
 }

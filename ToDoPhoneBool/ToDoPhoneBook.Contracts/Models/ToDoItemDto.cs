@@ -1,5 +1,6 @@
 ﻿using System;
-using ToDoPhoneBook.Contracts.Enums;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace ToDoPhoneBook.Contracts.Models
 {
@@ -13,7 +14,7 @@ namespace ToDoPhoneBook.Contracts.Models
         /// <summary>
         /// Тип записи.
         /// </summary>
-        public ToDoTypeEnum ItemType { get; set; }
+        public string ItemType { get; set; }
 
         /// <summary>
         /// Тема.
@@ -31,8 +32,23 @@ namespace ToDoPhoneBook.Contracts.Models
         public DateTime? EndDate { get; set; }
 
         /// <summary>
+        /// Дата и время начала.
+        /// </summary>
+        public string StartDateString { get; set; }
+
+        /// <summary>
+        /// Дата и время окончания.
+        /// </summary>
+        public string EndDateString { get; set; }
+
+        /// <summary>
         /// Место.
         /// </summary>
         public string Place { get; set; }
+
+        /// <summary>
+        /// Признак выполнения.
+        /// </summary>
+        public bool IsDone { get; set; }
     }
 }

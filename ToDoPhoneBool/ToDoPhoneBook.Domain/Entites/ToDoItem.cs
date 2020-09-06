@@ -35,5 +35,10 @@ namespace ToDoPhoneBook.Domain.Entites
         /// Место.
         /// </summary>
         public string Place { get; set; }
+
+        /// <summary>
+        /// Признак выполнения.
+        /// </summary>
+        public bool IsDone { get; set; }
     }
 }
