@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ToDoPhoneBool/.vs/ToDoPhoneBook/v16/.suo
+/ToDoPhoneBool/.vs/ToDoPhoneBook/DesignTimeBuild/.dtbcache.v2
