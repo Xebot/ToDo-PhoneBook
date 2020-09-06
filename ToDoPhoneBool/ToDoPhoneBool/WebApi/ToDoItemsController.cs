@@ -107,6 +107,12 @@ namespace ToDoPhoneBook.WebApi
             filter.ItemType = int.TryParse(filterDto.Type, out var itemType) ? (ToDoTypeEnum)itemType : ToDoTypeEnum.AllTypes;
             filter.PeriodType = int.TryParse(filterDto.TimePeriod, out var periodType) ? (TimePeriodEnum)periodType : TimePeriodEnum.AllTime;
 
+            if (DateTime.TryParse(filterDto.StartDateSearch, out var StartDT))
+                filter.SearchStartDate = StartDT;
+
+            if (DateTime.TryParse(filterDto.EndDateSearch, out var EndDT))
+                filter.SearchEndDate = EndDT;
+
             return filter;
         }
     }

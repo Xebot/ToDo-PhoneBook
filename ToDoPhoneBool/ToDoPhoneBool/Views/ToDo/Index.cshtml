@@ -8,9 +8,20 @@
 
 <a asp-action="Create">Добавить запись</a>
 
-<br/>
-<br/>
-<label>Сортировка по временному промежутку</label>
+<br />
+<br />
+<label for="SearchStartDate">Поиск по дате начала события:</label>
+<input type="date" id="SearchStartDate" name="SearchStartDate">
+<button id="SearchStartDateButton">Поиск по дате начала</button>
+<br />
+<br />
+
+<label for="SearchEndDate">Поиск по дате начала события:</label>
+<input type="date" id="SearchEndDate" name="SearchEndDate">
+<button id="SearchEndDateButton">Поиск по дате окончания</button>
+<br />
+<br />
+<label>Фильтрация по временному промежутку</label>
 <div class="periodSort">
     <button id="SearchDay" type="button" class="btn btn-default filter TimePeriod">День</button>
     <button id="SearchWeek" type="button" class="btn btn-default filter TimePeriod">Неделя</button>
@@ -18,14 +29,14 @@
     <button id="SearchFull" type="button" class="btn btn-default filter TimePeriod active-button">Весь период</button>
 </div>
 
-<label>Сортировка по типу события</label>
+<label>Фильтрация по типу события</label>
 <div>
     <button id="Meeting" type="button" class="btn btn-default filter Type">Встреча</button>
     <button id="Business" type="button" class="btn btn-default filter Type">Дело</button>
     <button id="Memo" type="button" class="btn btn-default filter Type">Памятка</button>
     <button id="AllTypes" type="button" class="btn btn-default filter Type active-button">Все события</button>
 </div>
-<br\>
+
 <div>
     <button id="ResetFilters" type="button" class="btn btn-default">Сбросить все фильтры</button>
 </div>
@@ -48,6 +59,27 @@
 
 
 <script type="text/javascript">
+
+    $("#SearchStartDateButton").on("click", function () {
+        debugger;
+        if ($("#SearchStartDate").val()) {
+            $("#SearchStartDate").addClass("search");
+            grid.bootgrid("reload");
+            $("#SearchStartDate").removeClass("search");
+            document.getElementById("SearchStartDate").value = "";
+        }            
+    });
+
+    $("#SearchEndDateButton").on("click", function () {
+        debugger;
+        if ($("#SearchEndDate").val()) {
+            $("#SearchEndDate").addClass("search");
+            grid.bootgrid("reload");
+            $("#SearchEndDate").removeClass("search");
+            document.getElementById("SearchEndDate").value = "";
+        }
+    });
+
     var baseApi = "/api/ToDoItems";
     var grid = $("#grid-data-api").bootgrid({
         labels: {
@@ -57,9 +89,16 @@
         },
         ajax: true,
         post: function () {
-            return {
+            debugger;
+            if ($("#SearchStartDate").hasClass("search"))
+                var startSearchDate = $("#SearchStartDate").val();
+            if ($("#SearchEndDate").hasClass("search"))
+                var endSearchDate = $("#SearchEndDate").val();
+            return {              
                 TimePeriod: document.getElementById("TimePeriod").innerHTML,
-                Type: document.getElementById("Type").innerHTML
+                Type: document.getElementById("Type").innerHTML,
+                StartDateSearch: startSearchDate,
+                EndDateSearch: endSearchDate
             };
         },
         url: baseApi,
@@ -108,21 +147,21 @@
             if (document.getElementById("TimePeriod").innerHTML == buttonValue) {
                 document.getElementById("TimePeriod").innerHTML = "4";
                 $("#SearchFull").addClass("active-button");
-            }                
+            }
             else {
                 $(buttonId).addClass("active-button");
                 document.getElementById("TimePeriod").innerHTML = buttonValue;
-            }                
+            }
         }
         else {
             if (document.getElementById("Type").innerHTML == buttonValue) {
                 $("#AllTypes").addClass("active-button");
                 document.getElementById("Type").innerHTML = "4";
-            }                
+            }
             else {
                 $(buttonId).addClass("active-button");
                 document.getElementById("Type").innerHTML = buttonValue;
-            }                
+            }
         }
         grid.bootgrid("reload");
     }
@@ -137,7 +176,7 @@
 
     $("#SearchMonth").on("click", function () {
         SetOrReset("3", "TimePeriod", "#SearchMonth");
-        
+
     });
 
     $("#SearchFull").on("click", function () {

@@ -31,5 +31,9 @@ namespace ToDoPhoneBook.Contracts.Models
         public bool SortEndDate { get; set; }
 
         public bool SortEndDateDesc { get; set; }
+
+        public DateTime? SearchStartDate { get; set; }
+
+        public DateTime? SearchEndDate { get; set; }
     }
 }

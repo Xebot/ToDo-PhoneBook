@@ -25,14 +25,6 @@ namespace ToDoPhoneBook.Controllers
         // GET: ToDoController
         public ActionResult Index()
         {
-            //var result = _toDoService.GetToDoItems(10,0);
-            //return View(result);
-            return View();
-        }
-
-        // GET: ToDoController/Details/5
-        public ActionResult Details(int id)
-        {
             return View();
         }
 

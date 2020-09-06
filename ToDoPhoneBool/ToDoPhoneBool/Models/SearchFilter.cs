@@ -29,5 +29,9 @@
         /// Тип запрашиваемых записей.
         /// </summary>
         public string Type { get;set; }
+
+        public string StartDateSearch { get; set; }
+
+        public string EndDateSearch { get; set; }
     }
 }

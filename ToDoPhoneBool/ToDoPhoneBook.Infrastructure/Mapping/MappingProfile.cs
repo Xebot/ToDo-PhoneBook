@@ -13,10 +13,10 @@ namespace ToDoPhoneBook.Infrastructure.Mapping
             CreateMap<ToDoItem, ToDoItemDto>()
                 .ForMember(dest => dest.ItemType, opt => opt.MapFrom(src => EnumHelper<ToDoTypeEnum>.GetDisplayValue(src.ItemType)))
                 .ForMember(dest => dest.StartDateString, opt => opt.MapFrom(src => src.StartDate.HasValue 
-                ? src.StartDate.Value.ToString("MM/dd/yyyy HH:mm:ss")
+                ? src.StartDate.Value.ToString("dd/MM/yyyy HH:mm:ss")
                 : string.Empty))
                 .ForMember(dest => dest.EndDateString, opt => opt.MapFrom(src => src.EndDate.HasValue
-                ? src.EndDate.Value.ToString("MM/dd/yyyy HH:mm:ss")
+                ? src.EndDate.Value.ToString("dd/MM/yyyy HH:mm:ss")
                 : string.Empty));
         }
     }

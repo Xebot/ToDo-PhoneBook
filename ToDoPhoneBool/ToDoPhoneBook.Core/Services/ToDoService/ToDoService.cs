@@ -41,7 +41,9 @@ namespace ToDoPhoneBook.Core.Services.ToDoService
             if (!string.IsNullOrWhiteSpace(filter.SearchPhrase))
                 query = query.Where(x => EF.Functions.Like(x.Title.ToUpper(), $"%{filter.SearchPhrase.ToUpper()}%"));
 
-            query = TakeByTimePeriod(query, filter.PeriodType);            
+            query = TakeByTimePeriod(query, filter.PeriodType);
+
+            query = ApplyDateSearch(query, filter);
 
             var totalCount = query.Count();
             var entities = query.Skip(filter.PageNumber * filter.TakeCount).Take(filter.TakeCount);
@@ -141,6 +143,16 @@ namespace ToDoPhoneBook.Core.Services.ToDoService
             return _toDoItemsRepository.Create(item);
         }
 
+        private IQueryable<ToDoItem> ApplyDateSearch(IQueryable<ToDoItem> query, SearchItemFilter filter)
+        {
+            if (filter.SearchStartDate.HasValue)
+                return query.Where(x => x.StartDate.HasValue && x.StartDate.Value.Date == filter.SearchStartDate.Value.Date);
+
+            if (filter.SearchEndDate.HasValue)
+                return query.Where(x => x.EndDate == filter.SearchEndDate);
+
+            return query;
+        }
         private IQueryable<ToDoItem> TakeByTimePeriod(IQueryable<ToDoItem> query, TimePeriodEnum period)
         {            
             switch (period)
