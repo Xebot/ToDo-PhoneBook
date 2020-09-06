@@ -1,9 +1,10 @@
 ﻿using System;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 
 namespace ToDoPhoneBook.Contracts.Models
 {
+    /// <summary>
+    /// Транспортная модель записи.
+    /// </summary>
     public class ToDoItemDto
     {
         /// <summary>

@@ -30,8 +30,14 @@
         /// </summary>
         public string Type { get;set; }
 
+        /// <summary>
+        /// Дата для поиска по дате начала.
+        /// </summary>
         public string StartDateSearch { get; set; }
 
+        /// <summary>
+        /// Дата для поиска по дате окончания.
+        /// </summary>
         public string EndDateSearch { get; set; }
     }
 }

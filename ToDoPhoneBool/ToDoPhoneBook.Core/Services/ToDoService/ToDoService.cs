@@ -127,6 +127,7 @@ namespace ToDoPhoneBook.Core.Services.ToDoService
             _toDoItemsRepository.Update(item);
         }
 
+        /// <inheritdoc/>
         public int CreateItem(ToDoItemDto dto)
         {
             var itemType = EnumHelper<ToDoTypeEnum>.ParseEnum(dto.ItemType);
