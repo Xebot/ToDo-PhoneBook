@@ -1,9 +1,0 @@
-D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Contracts\bin\Debug\netstandard2.0\ToDoPhoneBook.Contracts.deps.json
-D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Contracts\bin\Debug\netstandard2.0\ToDoPhoneBook.Contracts.dll
-D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Contracts\bin\Debug\netstandard2.0\ToDoPhoneBook.Contracts.pdb
-D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Contracts\obj\Debug\netstandard2.0\ToDoPhoneBook.Contracts.AssemblyInfoInputs.cache
-D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Contracts\obj\Debug\netstandard2.0\ToDoPhoneBook.Contracts.AssemblyInfo.cs
-D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Contracts\obj\Debug\netstandard2.0\ToDoPhoneBook.Contracts.dll
-D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Contracts\obj\Debug\netstandard2.0\ToDoPhoneBook.Contracts.pdb
-D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Contracts\obj\Debug\netstandard2.0\ToDoPhoneBook.Contracts.csprojAssemblyReference.cache
-D:\ToDoPhoneBook\ToDoPhoneBool\ToDoPhoneBook.Contracts\obj\Debug\netstandard2.0\ToDoPhoneBook.Contracts.csproj.CoreCompileInputs.cache
