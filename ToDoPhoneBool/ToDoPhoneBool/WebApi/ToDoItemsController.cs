@@ -20,6 +20,10 @@ namespace ToDoPhoneBook.WebApi
             _toDoService = toDoService;
         }
 
+        /// <summary>
+        /// Получает все записи удовлетворящие фильтру.
+        /// </summary>
+        /// <param name="filterDto">Фильтр.</param>
         [HttpPost]
         public IActionResult List([FromForm]SearchFilterDto filterDto)
         {
@@ -33,6 +37,10 @@ namespace ToDoPhoneBook.WebApi
             return Ok(items);
         }
 
+        /// <summary>
+        /// Отмечает выбранную запись выполненной.
+        /// </summary>
+        /// <param name="id">Идентификатор записи.</param>
         [Route("{id}")]
         [HttpGet]
         public IActionResult MakeDone(int id)

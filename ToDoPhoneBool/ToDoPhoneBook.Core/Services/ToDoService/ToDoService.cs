@@ -154,6 +154,7 @@ namespace ToDoPhoneBook.Core.Services.ToDoService
 
             return query;
         }
+
         private IQueryable<ToDoItem> TakeByTimePeriod(IQueryable<ToDoItem> query, TimePeriodEnum period)
         {            
             switch (period)
