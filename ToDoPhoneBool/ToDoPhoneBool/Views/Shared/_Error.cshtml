@@ -1,0 +1,13 @@
+﻿
+
+@{
+    if (ViewBag.Errors != null)
+    {
+        foreach (var error in ViewBag.Errors)
+        {
+            <div class="alert alert-danger" role="alert">
+                @error
+            </div>
+        };
+    }
+}
